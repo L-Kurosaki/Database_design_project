@@ -1,6 +1,6 @@
 # Kasi Bus Booking System (KBBS)
 
-![Bus Booking System](media/image1.jpeg)
+
 
 The **Kasi Bus Booking System (KBBS)** is a digital platform designed to streamline the process of booking, managing, and tracking bus tickets for local travel. The system aims to enhance user convenience, improve operational efficiency for bus service providers, and reduce manual errors associated with traditional ticketing systems.
 
