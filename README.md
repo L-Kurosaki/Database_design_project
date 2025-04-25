@@ -11,8 +11,10 @@ The **Kasi Bus Booking System (KBBS)** is a digital platform designed to streaml
 3. [Company Situation Analysis](#company-situation-analysis)
 4. [Problems and Constraints](#problems-and-constraints)
 5. [Database System Specifications](#database-system-specifications)
-6. [Conclusion](#conclusion)
-7. [References](#references)
+6. [ERD: Attributes, Keys & Relationships](#erd-attributes-keys--relationships)  
+7. [Database Normalization](#database-normalization)  
+8. [Conclusion](#conclusion)
+9. [References](#references)
 
 ---
 
@@ -89,7 +91,86 @@ To ensure the successful development and implementation of the KBBS, the followi
 
 ---
 
-## 6. Conclusion
+## 6.  📚 ERD: Attributes, Keys & Relationships
+
+### 🏷️ Attributes
+
+**User Table**
+- `User_ID` (PK)  
+- `First_Name`, `Last_Name`, `Age`, `Email`, `Phone_num`, `Reg_Date`, `Password`  
+- `NextOfKin_Name`, `NextOfKin_Phone`
+
+**Bus Table**
+- `Bus_ID` (PK)  
+- `Bus_Model`, `Bus_Capacity`  
+- `Driver_ID` (FK → Driver)
+
+**Schedule Table**
+- `ScheduleID` (PK)  
+- `Bus_ID` (FK), `RouteID` (FK)  
+- `DepartureDate`, `DepartureTime`, `ArrivalTime`, `SeatsAvailable`
+
+**Route Table**
+- `RouteID` (PK)  
+- `Source`, `Destination`, `Distance_KM`, `Estimated_Time`
+
+**Booking Table**
+- `Booking_ID` (PK)  
+- `User_ID` (FK), `ScheduleID` (FK), `Booking_Date`, `Price`, `Booking_Status`
+
+**Seat Table**
+- `Seat_ID` (PK), `Bus_ID` (FK), `Seat_Availability`
+
+**Booking_Seat Table**
+- `Booking_ID` (FK), `Seat_ID` (FK)
+
+**Complaint Table**
+- `Complaint_ID` (PK)  
+- `User_ID` (FK), `Booking_ID` (FK)  
+- `Complaint_Type`, `Description`, `Status`, `DateSubmitted`, `DateResolved`, `Admin_ID` (FK)
+
+**Admin Table**
+- `Admin_ID` (PK), `Admin_Name`
+
+**Driver Table**
+- `Driver_ID` (PK), `Driver_Name`
+
+---
+## 7.Entity Relationships
+
+1. **User** — books — **Booking** (1:N)  
+2. **Booking** — assigned to — **Seat** (1:1 at a time, M:1 historically)  
+3. **Bus** — has — **Schedule** (1:N)  
+4. **Schedule** — follows — **Route** (1:N)  
+5. **Bus** — contains — **Seat** (1:N)  
+6. **User** — submits — **Complaint** (1:N)  
+7. **Complaint** — about — **Booking** (1:N)  
+8. **Complaint** — handled by — **Admin** (1:N)  
+9. **Bus** — driven by — **Driver** (1:N)
+
+---
+
+## 🧩 Database Normalization
+
+### 1NF
+- Split composite attributes like `Names` into `First_Name` and `Last_Name`  
+- All attributes are atomic
+
+### 2NF
+- Eliminated partial dependencies in `Booking_Seat`  
+- All relations with single-column PKs, so 2NF satisfied
+
+### 3NF
+- Removed transitive dependencies  
+  - `Assigned_BusDriver_Name` → `Driver` table  
+  - `Assigned_Admin_Name` → `Admin` table
+
+    
+![Alt text](path/to/image)
+
+--- 
+
+## 8. Conclusion
 The **Kasi Bus Booking System (KBBS)** aims to revolutionize local public transport by providing a **fast, reliable, and user-friendly platform** for booking bus tickets. By addressing the identified problems and constraints, the system will enhance operational efficiency, reduce manual errors, and improve customer satisfaction. The **route scheduling** and **seat reservation** features are central to the system's success, ensuring real-time updates and efficient management of bus operations.
 
 ---
@@ -105,6 +186,8 @@ The **Kasi Bus Booking System (KBBS)** aims to revolutionize local public transp
 8. Johnson, L. (2021). "Scalability Challenges in Public Transport Systems." *International Journal of Transport Management*, 12(2), 89-102.
 9. Brown, T. (2020). "Real-Time Seat Allocation Systems: A Case Study." *Transportation Research*, 15(1), 34-49.
 10. Green, M. (2023). "Secure Payment Systems in Public Transport." *Journal of Cybersecurity*, 8(3), 210-225.
+11. Miro. (n.d.). Bus Booking System ERD. [online] Available at: https://miro.com/app/board/uXjVI_IZwF4=
+12. Monkhouse, J. (2021). Logical Data Modelling using Crow's Foot Notation. [YouTube video] Available at: https://youtu.be/J-drts33N8g?si=Pid8V6yFVl6_A6RM
 
 ---
 
