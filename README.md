@@ -91,9 +91,9 @@ To ensure the successful development and implementation of the KBBS, the followi
 
 ---
 
-## 6.  📚 ERD: Attributes, Keys & Relationships
+## 6.   ERD: Attributes, Keys & Relationships
 
-### 🏷️ Attributes
+###  Attributes
 
 **User Table**
 - `User_ID` (PK)  
@@ -150,7 +150,7 @@ To ensure the successful development and implementation of the KBBS, the followi
 
 ---
 
-## 🧩 Database Normalization
+##  Database Normalization
 
 ### 1NF
 - Split composite attributes like `Names` into `First_Name` and `Last_Name`  
