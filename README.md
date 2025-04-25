@@ -166,7 +166,7 @@ To ensure the successful development and implementation of the KBBS, the followi
   - `Assigned_Admin_Name` → `Admin` table
 
     
-![Alt text](path/to/image)
+![Alt text](https://github.com/L-Kurosaki/Database_design_project/blob/main/Screenshot%202025-04-24%20222900.png)
 
 --- 
 
