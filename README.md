@@ -36,7 +36,7 @@ To ensure the successful development and implementation of the KBBS, the followi
 | **Database Designer** | Kgotso Seadimo (37611720) | Design and manage the database schema using **MySQL**. |
 | **System Analyst**    | Dineo Kekana (40912965) | Analyze system requirements and propose solutions. |
 | **QA Engineer**       | Kw Sejake (35006676) | Test the system for bugs and ensure reliability. |
-| **Documentation Specialist** | Thuso Makhada (45367108) | Create and maintain project documentation using **GitHub** and **[Eraser.io](https://app.eraser.io/dashboard/all)**. |
+| **Documentation Specialist** | Thuso Makhada (45367108) | Create and maintain project documentation using **GitHub** |
 
 ---
 
@@ -209,4 +209,3 @@ The **Kasi Bus Booking System (KBBS)** aims to revolutionize local public transp
 - **Backend:** Express.js
 - **Database:** MySQL
 - **Version Control & CI/CD:** GitHub
-- **UML Design:** [Eraser.io](https://app.eraser.io/dashboard/all)
