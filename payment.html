@@ -1,0 +1,93 @@
+<!DOCTYPE htm>
+<html lang="en">
+<head>
+    <title>Payment Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" method="post">
+    <div class="form-container ">
+        <div class="outline-fields">
+            <div class="billing-address">
+                <fieldset>
+                    <legend>BILLING ADDRESS</legend>
+
+                    <div class="form-group">
+                        <label for="first-name">Full Name: </label>
+                        <input type="text" id="first-name" name="first-name" class="small-input" required/>                   
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" minlength="8" class="small-input" required/>                   
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address: </label>
+                        <input type="text" id="address" name="address" class="small-input" required/> 
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="city">City: </label>
+                        <input type="text" id="city" name="city" class="small-input" required/> 
+                    </div>
+
+                    <div class="inline-fields">
+                        <div class="form-group">
+                            <label for="state">State: </label>
+                            <input type="text" id="state" name="state" class="small-input" required/>
+                        </div> 
+
+                        <div class="form-group">
+                            <label for="zip-code">Zip Code: </label>
+                            <input type="text" id="zip-code" name="zip-code" class="small-input" required/>     
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            
+            <div class="payment">
+                <legend>PAYMENT</legend>
+                    <div class="cards-accepted">
+                        <label>Cards Accepted:</label>
+                        <div class="card-logos">
+                            <img src="images\paypal.png" alt="PayPal" >
+                            <img src="images\mastercard.png" alt="Mastercard">
+                            <img src="images\visa.png" alt="Visa">
+                            <img src="images\discover.png" alt="Discover" >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name-card">Name On Card: </label>
+                        <input type="text" id="name-card" required/>    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number">Credit Card Number: </label>
+                        <input type="text" id="card-number" name="card-number" inputmode="numeric" maxlength="16" class="small-input" required/> 
+                    </div>
+                    <div class="inline-fields">
+                        <div class="form-group">
+                            <label for="exp-date">Exp. Date: </label>
+                            <input type="text" id="exp-date" name="exp-date" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp" class="small-input" required/> 
+                            
+                        </div> 
+
+                        <div class="form-group">
+                            <label for="cvv">CVV: </label>
+                            <input type="text" id="cvv" name="cvv" class="small-input" required/>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Submit">
+            <input type="submit" value="Pay Now"/>
+        </div>
+    </div>
+    </form>
+</body>
