@@ -1,0 +1,230 @@
+/* Global Styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.1));
+    padding: 4rem 0;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Button Styles */
+.btn-primary {
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 2rem;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Feature Cards */
+.feature-card i {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    
+    .hero-section .btn-lg {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Search Form Card */
+.search-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seat Map Styles */
+.seat-map {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.seat.available {
+    background-color: #fff;
+    border: 2px solid #6c757d;
+    color: #6c757d;
+}
+
+.seat.selected {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+.seat.booked {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.seat:hover:not(.booked) {
+    transform: scale(1.1);
+}
+
+.seat-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.seat-icon.available {
+    background-color: #fff;
+    border: 2px solid #6c757d;
+}
+
+.seat-icon.selected {
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+}
+
+.seat-icon.booked {
+    background-color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+/* Passenger Form Styles */
+.passenger-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.passenger-form h6 {
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+/* Price Summary Styles */
+#priceSummary {
+    font-size: 1.1rem;
+}
+
+#priceSummary hr {
+    margin: 15px 0;
+}
+
+/* Journey Details Styles */
+#busDetails p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+#busDetails strong {
+    color: #495057;
+    min-width: 120px;
+    display: inline-block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .seat {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    
+    #busDetails strong {
+        min-width: 100px;
+    }
+} 
