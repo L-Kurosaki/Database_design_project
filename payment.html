@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kasi Bus Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Kasi Bus Booking System</h1>
+    <form id="bookingForm">
+      <label>Name:</label>
+      <input type="text" id="name" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+
+      <label>Contact Number:</label>
+      <input type="text" id="contact" required>
+
+      <label>Pickup Spot:</label>
+      <select id="pickup">
+        <option value="">--Select--</option>
+        <option value="Unibo">Unibo</option>
+        <option value="Megacity">Megacity</option>
+        <option value="Morena Mall">Morena Mall</option>
+        <option value="The Crossing">The Crossing</option>
+      </select>
+
+      <label>Destination:</label>
+      <select id="destination">
+        <option value="">--Select--</option>
+        <option value="Unibo">Unibo</option>
+        <option value="Megacity">Megacity</option>
+        <option value="Morena Mall">Morena Mall</option>
+        <option value="The Crossing">The Crossing</option>
+      </select>
+
+      <label>Ticket Type:</label>
+      <select id="ticketType">
+        <option value="Adult">Adult</option>
+        <option value="Child">Child</option>
+      </select>
+
+      <label>Number of Tickets:</label>
+      <input type="number" id="quantity" min="1" value="1">
+
+      <label>Payment Method:</label>
+      <select id="paymentMethod" onchange="toggleCardDetails()">
+        <option value="Cash">Cash</option>
+        <option value="Card">Card</option>
+      </select>
+
+      <div id="cardDetails" style="display:none;">
+        <label>Card Number:</label>
+        <input type="text" id="cardNumber">
+
+        <label>Expiry Date:</label>
+        <input type="text" id="expiryDate">
+
+        <label>CVV:</label>
+        <input type="text" id="cvv">
+      </div>
+
+      <button type="submit">Book Ticket</button>
+    </form>
+
+    <div id="result"></div>
+    <div id="ticket" style="display:none;">
+      <h2>Printable Ticket</h2>
+      <div id="ticketContent"></div>
+      <button onclick="window.print()">Print Ticket</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
