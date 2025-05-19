@@ -1,0 +1,129 @@
+fieldset{
+    border: none;
+    padding:0;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.small-input{
+    width: 50px;
+    padding: 6px;
+}
+
+.inline-fields{
+    display: flex;
+    gap: 10px;
+}
+
+.inline-fields .form-group{
+    flex: 1;
+}
+
+legend{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.outline-fields{
+    display: flex;
+    gap: 20px;;
+}
+
+.inline-fields .form-group {
+  flex: 1;
+}
+
+.cards-accepted {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.card-logos {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.card-logos img {
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
+  background-color: white;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-container{
+    max-width: 800px;      
+  margin: 40px auto;    
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+ .billing-address, .payment{
+    flex:1;
+ }
+
+ .form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.Submit {
+    text-align: center;
+    margin-top: 20px;
+    width: 120px;
+}
+
+.Submit input[type="submit"] {
+  padding: 10px 30px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Submit input[type="submit"]:hover {
+  background-color: #0056b3;
+}
